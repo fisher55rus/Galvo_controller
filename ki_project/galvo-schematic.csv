@@ -1,0 +1,10 @@
+¹;Ref;Package;Q;Name
+1;R2,R6;R_0603_1608Metric_Pad1.05x0.95mm_HandSolder;2;47k
+2;J1;Molex_KK-254_AE-6410-03A_1x03_P2.54mm_Vertical;1;Molex_KK-254 3-pin
+3;X2,X3;JST_XH_B03B-XH-A_1x03_P2.50mm_Vertical;2;JST-XH-03-PIN
+4;X-GAIN,Y-GAIN,X-OFFSET,Y-OFFSET;Potentiometer_Murata_PVS3_Vertical;4;10k
+6;SV4;MA06-1;1;Pin header
+7;R1,R5;R_2010_5025Metric_Pad1.52x2.65mm_HandSolder;2;1k
+8;R3,R7,R11,R12;R_0805_2012Metric_Pad1.15x1.40mm_HandSolder;4;10k
+9;U2;MSOP-8_3x3mm_P0.65mm;1;MCP4822
+10;U1;TSSOP-14_4.4x5mm_P0.65mm;1;TL084IPT

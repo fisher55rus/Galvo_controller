@@ -1,0 +1,23 @@
+* D:\GIT\UpWork\Galvo_Controller\model\Galvo_controller.sch
+
+* Schematics Version 9.2
+* Fri Mar 29 22:14:12 2019
+
+
+
+** Analysis setup **
+.OP 
+
+
+* From [PSPICE NETLIST] section of d:\Program Files\Orcad\PSpice\PSpice.ini:
+.lib "D:\Program Files\Orcad\PSpice\UserLib\OPA_2.lib"
+.lib "D:\Program Files\Orcad\PSpice\UserLib\MyLib.lib"
+.lib "nom.lib"
+
+.INC "Galvo_controller.net"
+
+
+.PROBE V(*) I(*) W(*) D(*) NOISE(*) 
+
+
+.END

@@ -1,0 +1,18 @@
+* Schematics Netlist *
+
+
+
+R_R3         0 Out-  1MEG  
+R_R7         0 Out+  1MEG  
+R_R8         $N_0002 $N_0001  1k  
+V_V2         0 -15 15
+V_V1         +15 0 15
+R_R2         Out+ $N_0003  10k  
+X_U1A         0 $N_0003 +15 -15 Out- TL084
+R_R1         $N_0003 Out-  10k  
+R_R5         0 $N_0004  10k  
+R_R4         $N_0005 +15  47k  
+X_U2A         $N_0004 $N_0001 +15 -15 Out+ TL084
+R_R9         $N_0004 $N_0005  1n  
+R_R6         $N_0001 Out+  10k  
+V_V3         $N_0002 0 2.5

@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name galvo-schematic-eagle-import)(type Legacy)(uri ${KIPRJMOD}/galvo-schematic-eagle-import.lib)(options "")(descr ""))
+)

@@ -1,0 +1,308 @@
+
+**** 03/29/19 22:14:12 ********* PSpice 9.2 (Mar 2000) ******** ID# 1 ********
+
+ * D:\GIT\UpWork\Galvo_Controller\model\Galvo_controller.sch
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+* Schematics Version 9.2
+* Fri Mar 29 22:14:12 2019
+
+
+
+** Analysis setup **
+.OP 
+
+
+* From [PSPICE NETLIST] section of d:\Program Files\Orcad\PSpice\PSpice.ini:
+.lib "D:\Program Files\Orcad\PSpice\UserLib\OPA_2.lib"
+.lib "D:\Program Files\Orcad\PSpice\UserLib\MyLib.lib"
+.lib "nom.lib"
+
+.INC "Galvo_controller.net"
+
+
+
+**** INCLUDING Galvo_controller.net ****
+* Schematics Netlist *
+
+
+
+R_R3         0 Out-  1MEG  
+R_R7         0 Out+  1MEG  
+R_R8         $N_0002 $N_0001  1k  
+V_V2         0 -15 15
+V_V1         +15 0 15
+R_R2         Out+ $N_0003  10k  
+X_U1A         0 $N_0003 +15 -15 Out- TL084
+R_R1         $N_0003 Out-  10k  
+R_R5         0 $N_0004  10k  
+R_R4         $N_0005 +15  47k  
+X_U2A         $N_0004 $N_0001 +15 -15 Out+ TL084
+R_R9         $N_0004 $N_0005  1n  
+R_R6         $N_0001 Out+  10k  
+V_V3         $N_0002 0 2.5
+
+**** RESUMING Galvo_controller.cir ****
+.PROBE V(*) I(*) W(*) D(*) NOISE(*) 
+
+
+.END
+
+**** 03/29/19 22:14:12 ********* PSpice 9.2 (Mar 2000) ******** ID# 1 ********
+
+ * D:\GIT\UpWork\Galvo_Controller\model\Galvo_controller.sch
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1A.x_tl084.dx 
+          IS  800.000000E-18 
+          RS    1            
+
+
+               X_U1A.x_tl084.dy 
+          IS  800.000000E-18 
+          RS    1.000000E-03 
+         CJO   10.000000E-12 
+
+
+               X_U2A.x_tl084.dx 
+          IS  800.000000E-18 
+          RS    1            
+
+
+               X_U2A.x_tl084.dy 
+          IS  800.000000E-18 
+          RS    1.000000E-03 
+         CJO   10.000000E-12 
+
+
+**** 03/29/19 22:14:12 ********* PSpice 9.2 (Mar 2000) ******** ID# 1 ********
+
+ * D:\GIT\UpWork\Galvo_Controller\model\Galvo_controller.sch
+
+
+ ****     Junction FET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1A.x_tl084.jx 
+               NJF             
+         VTO   -1            
+        BETA  984.200000E-06 
+          IS    2.500000E-12 
+
+
+               X_U2A.x_tl084.jx 
+               NJF             
+         VTO   -1            
+        BETA  984.200000E-06 
+          IS    2.500000E-12 
+
+
+**** 03/29/19 22:14:12 ********* PSpice 9.2 (Mar 2000) ******** ID# 1 ********
+
+ * D:\GIT\UpWork\Galvo_Controller\model\Galvo_controller.sch
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  +15)   15.0000  (  -15)  -15.0000  ( Out+)    3.9561  ( Out-)   -3.9561      
+
+($N_0001)    2.6324                   ($N_0002)    2.5000                       
+
+($N_0003)-6.287E-06                   ($N_0004)    2.6325                       
+
+($N_0005)    2.6325                   (X_U1A.x_tl084.6) 686.2E-06               
+
+(X_U1A.x_tl084.7)   -3.9761           (X_U1A.x_tl084.8)   -3.9761               
+
+(X_U1A.x_tl084.9)    0.0000           (X_U2A.x_tl084.6)-691.2E-06               
+
+(X_U2A.x_tl084.7)    3.9827           (X_U2A.x_tl084.8)    3.9827               
+
+(X_U2A.x_tl084.9)    0.0000           (X_U1A.x_tl084.10)     .6546              
+
+(X_U1A.x_tl084.11)   14.6540          (X_U1A.x_tl084.12)   14.6540              
+
+(X_U1A.x_tl084.53)   13.5000          (X_U1A.x_tl084.54)  -13.5000              
+
+(X_U1A.x_tl084.90)    -.3996          (X_U1A.x_tl084.91)   50.0000              
+
+(X_U1A.x_tl084.92)  -50.0000          (X_U1A.x_tl084.99)    0.0000              
+
+(X_U2A.x_tl084.10)    3.2848          (X_U2A.x_tl084.11)   14.6500              
+
+(X_U2A.x_tl084.12)   14.6490          (X_U2A.x_tl084.53)   13.5000              
+
+(X_U2A.x_tl084.54)  -13.5000          (X_U2A.x_tl084.90)     .5319              
+
+(X_U2A.x_tl084.91)   50.0000          (X_U2A.x_tl084.92)  -50.0000              
+
+(X_U2A.x_tl084.99)    0.0000          
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V2        -3.468E-03
+    V_V1        -3.736E-03
+    V_V3         1.324E-04
+    X_U1A.x_tl084.vb   6.862E-09
+    X_U1A.x_tl084.vc   1.746E-11
+    X_U1A.x_tl084.ve   1.091E-11
+    X_U1A.x_tl084.vlim  -3.996E-04
+    X_U1A.x_tl084.vlp  -5.040E-11
+    X_U1A.x_tl084.vln  -4.961E-11
+    X_U2A.x_tl084.vb  -6.912E-09
+    X_U2A.x_tl084.vc   9.545E-12
+    X_U2A.x_tl084.ve   1.819E-11
+    X_U2A.x_tl084.vlim   5.319E-04
+    X_U2A.x_tl084.vlp  -4.947E-11
+    X_U2A.x_tl084.vln  -5.054E-11
+
+    TOTAL POWER DISSIPATION   1.08E-01  WATTS
+
+
+**** 03/29/19 22:14:12 ********* PSpice 9.2 (Mar 2000) ******** ID# 1 ********
+
+ * D:\GIT\UpWork\Galvo_Controller\model\Galvo_controller.sch
+
+
+ ****     OPERATING POINT INFORMATION      TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+
+
+**** VOLTAGE-CONTROLLED CURRENT SOURCES
+
+
+NAME         X_U1A.x_tl084.ga        X_U1A.x_tl084.gcm     
+I-SOURCE     4.273E-09               1.114E-08            
+
+NAME         X_U2A.x_tl084.ga        X_U2A.x_tl084.gcm     
+I-SOURCE     6.279E-08               5.587E-08            
+
+
+**** VOLTAGE-CONTROLLED VOLTAGE SOURCES
+
+
+NAME         X_U1A.x_tl084.egnd      X_U2A.x_tl084.egnd    
+V-SOURCE     0.000E+00               0.000E+00            
+I-SOURCE     4.003E-04              -5.281E-04            
+
+
+**** CURRENT-CONTROLLED CURRENT SOURCES
+
+
+NAME         X_U1A.x_tl084.fb        X_U2A.x_tl084.fb      
+I-SOURCE     2.379E-02              -2.396E-02            
+
+
+**** CURRENT-CONTROLLED VOLTAGE SOURCES
+
+
+NAME         X_U1A.x_tl084.hlim      X_U2A.x_tl084.hlim    
+V-SOURCE    -3.996E-01               5.319E-01            
+I-SOURCE     7.993E-13              -1.064E-12            
+
+
+**** DIODES
+
+
+NAME         X_U1A.x_tl084.dc        X_U1A.x_tl084.de      
+MODEL        X_U1A.x_tl084.dy        X_U1A.x_tl084.dy      
+ID          -1.75E-11               -9.54E-12             
+VD          -1.75E+01               -9.54E+00             
+REQ          1.00E+12                1.00E+12             
+CAP          2.33E-12                3.08E-12             
+
+NAME         X_U1A.x_tl084.dlp       X_U1A.x_tl084.dln     
+MODEL        X_U1A.x_tl084.dx        X_U1A.x_tl084.dx      
+ID          -5.04E-11               -4.96E-11             
+VD          -5.04E+01               -4.96E+01             
+REQ          1.00E+12                1.00E+12             
+CAP          0.00E+00                0.00E+00             
+
+NAME         X_U1A.x_tl084.dp        X_U2A.x_tl084.dc      
+MODEL        X_U1A.x_tl084.dx        X_U2A.x_tl084.dy      
+ID          -3.00E-11               -9.54E-12             
+VD          -3.00E+01               -9.54E+00             
+REQ          1.00E+12                1.00E+12             
+CAP          0.00E+00                3.08E-12             
+
+NAME         X_U2A.x_tl084.de        X_U2A.x_tl084.dlp     
+MODEL        X_U2A.x_tl084.dy        X_U2A.x_tl084.dx      
+ID          -1.75E-11               -4.95E-11             
+VD          -1.75E+01               -4.95E+01             
+REQ          1.00E+12                1.00E+12             
+CAP          2.33E-12                0.00E+00             
+
+NAME         X_U2A.x_tl084.dln       X_U2A.x_tl084.dp      
+MODEL        X_U2A.x_tl084.dx        X_U2A.x_tl084.dx      
+ID          -5.05E-11               -3.00E-11             
+VD          -5.05E+01               -3.00E+01             
+REQ          1.00E+12                1.00E+12             
+CAP          0.00E+00                0.00E+00             
+
+
+**** JFETS
+
+
+NAME         X_U1A.x_tl084.j1        X_U1A.x_tl084.j2      
+MODEL        X_U1A.x_tl084.jx        X_U1A.x_tl084.jx      
+ID           1.17E-04                1.17E-04             
+VGS         -6.55E-01               -6.55E-01             
+VDS          1.40E+01                1.40E+01             
+GM           6.80E-04                6.80E-04             
+GDS          0.00E+00                0.00E+00             
+CGS          0.00E+00                0.00E+00             
+CGD          0.00E+00                0.00E+00             
+
+NAME         X_U2A.x_tl084.j1        X_U2A.x_tl084.j2      
+MODEL        X_U2A.x_tl084.jx        X_U2A.x_tl084.jx      
+ID           1.19E-04                1.19E-04             
+VGS         -6.52E-01               -6.52E-01             
+VDS          1.14E+01                1.14E+01             
+GM           6.84E-04                6.84E-04             
+GDS          0.00E+00                0.00E+00             
+CGS          0.00E+00                0.00E+00             
+CGD          0.00E+00                0.00E+00             
+
+          JOB CONCLUDED
+
+          TOTAL JOB TIME             .03
+
